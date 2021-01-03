@@ -1,0 +1,30 @@
+.main {
+    background-color: rgb(193, 227, 230);
+    display: flex;
+    text-align: center;
+    place-content: center;
+    gap: 1ch;
+    justify-content: center;
+    flex-direction: grid;
+}
+
+.header {
+    padding: 5em;
+}
+
+h2 {
+    padding: 2em;
+}
+
+p {
+    padding: 2em 2em;
+}
+
+.se .content {
+    display: grid;
+    flex-direction: column;
+}
+
+#searchWrapper {
+    padding: 2em;
+}
