@@ -1,43 +1,17 @@
-const searchBtn = document.getElementById('searchBtn')
-const query = document.getElementById('searchBar').innerText
-let dasbeers = []
+const searchBar = document.getElementById('searchBar')
+const beersList = document.getElementById('beersList')
 
-searchBtn.addEventListener('click', () => {
-    const searchString = query;
-    const filteredBeers = dasbeers.filter((beers) => {
-        return (
-            beers.name.includes(searchString) ||
-            beers.description.includes(searchString)
-        )
+const searchBeers = async searchText => {
+    const res = await fetch('http://localhost:3000/beers')
+    const beers = await res.json()
+        // console.log(beers)
+
+    // filter matches
+    let matches = beers.filter(beer => {
+        const regex = new RegExp(`^${searchText}`, 'gi')
+        return beer.name.match(regex) || beer.description.match(regex) || beer.brand.match(regex)
     })
-
-    console.log(filteredBeers)
-
-})
-
-
-const loadBeer = async() => {
-    try {
-        const res = await fetch('http://localhost:3000/beers')
-        dasbeers = await res.json()
-        displayBeer(dasbeers)
-    } catch (err) {
-        console.error(err);
-    }
+    console.log(matches)
 }
 
-
-const displayBeer = (beers) => {
-    const htmlString = beers.map((beers) => {
-        return `
-        <li class="beer">
-            <h2>${beers.name}</h2>
-            <p>${beers.description}</p>
-        </li>
-        `
-    }).join('');
-    beerList.innerHTML = htmlString
-
-}
-
-loadBeer()
+searchBar.addEventListener('input', () => searchBeers(searchBar.value))
