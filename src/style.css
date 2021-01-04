@@ -1,25 +1,29 @@
 body {
-    background-color: rgb(193, 227, 230);
+    background-image: url('images/fan-tan-alley.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
 }
 
 .main {
-    background-color: rgb(193, 227, 230);
     display: grid;
     text-align: center;
     gap: 1ch;
-    justify-content: center;
-    flex-direction: grid;
+    grid-column-start: auto;
 }
 
 .header {
-    margin: 1em;
     background: rgb(96, 206, 221);
     width: 100%;
+    border-radius: 25px;
+    position: fixed;
 }
 
-.search {
+#searchBar {
     padding: 0.5em;
     margin: 0.5em 1em;
+    border-radius: 10px;
 }
 
 h2 {
@@ -27,19 +31,20 @@ h2 {
 }
 
 h4 {
-    padding: 1em;
+    padding: 0.4em;
 }
 
 .content {
     display: grid;
-    place-content: center;
-    border: 10px solid rgb(blue)
+    place-content: center bottom;
+    justify-content: center;
 }
 
 .card {
-    background-color: rgb(180, 225, 231);
+    background-color: rgb(228, 110, 74);
     place-content: center;
-    transition: 0.7s linear;
+    border: 10px solid rgb(blue);
+    border-radius: 25px;
 }
 
 .footer {
