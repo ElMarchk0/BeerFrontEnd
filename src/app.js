@@ -12,6 +12,27 @@ const searchBeers = async searchText => {
         return beer.name.match(regex) || beer.description.match(regex) || beer.brand.match(regex)
     })
     console.log(matches)
+
+    if (searchText.length === 0) {
+        matches = []
+    }
+
+    outputHtml(matches)
+}
+
+const outputHtml = matches => {
+    if (matches.length > 0) {
+        const html = matches.map(match => `
+            <div class="card card-body mb-1>
+                <h4>${match.name} by ${match.brand}</h4>
+                <p>${match.description}</p>
+                <p>ABV: ${match.ABV}</p>
+            </div>
+        `).join('')
+        beersList.innerHTML = html
+    }
+
+
 }
 
 searchBar.addEventListener('input', () => searchBeers(searchBar.value))

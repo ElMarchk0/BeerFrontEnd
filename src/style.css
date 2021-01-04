@@ -1,37 +1,52 @@
+body {
+    background-color: rgb(193, 227, 230);
+}
+
 .main {
     background-color: rgb(193, 227, 230);
-    display: flex;
+    display: grid;
     text-align: center;
-    place-content: center;
     gap: 1ch;
     justify-content: center;
     flex-direction: grid;
 }
 
 .header {
-    padding: 5em;
+    margin: 1em;
+    background: rgb(96, 206, 221);
+    width: 100%;
+}
+
+.search {
+    padding: 0.5em;
+    margin: 0.5em 1em;
 }
 
 h2 {
-    padding: 2em;
+    padding: 1em;
 }
 
-p {
-    padding: 2em 2em;
+h4 {
+    padding: 1em;
 }
 
-.se .content {
+.content {
     display: grid;
-    flex-direction: column;
+    place-content: center;
+    border: 10px solid rgb(blue)
 }
 
-#searchWrapper {
-    padding: 2em;
+.card {
+    background-color: rgb(180, 225, 231);
+    place-content: center;
+    transition: 0.7s linear;
 }
 
-#beersList {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: rgb(96, 206, 221);
+    place-content: center;
+    text-align: center
 }
