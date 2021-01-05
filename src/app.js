@@ -2,7 +2,7 @@ const searchBar = document.getElementById('searchBar')
 const beersList = document.getElementById('beersList')
 
 const searchBeers = async searchText => {
-    const res = await fetch('http://localhost:3000/beers')
+    const res = await fetch('http://localhost:5000/api/beersV1.json')
     const beers = await res.json()
         // console.log(beers)
 

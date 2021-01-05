@@ -16,14 +16,15 @@ body {
 .header {
     background: rgb(96, 206, 221);
     width: 100%;
-    border-radius: 25px;
     position: fixed;
+    border: 10px solid rgb(blue);
 }
 
 #searchBar {
     padding: 0.5em;
     margin: 0.5em 1em;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 h2 {
@@ -36,15 +37,16 @@ h4 {
 
 .content {
     display: grid;
-    place-content: center bottom;
+    place-content: center;
     justify-content: center;
+    margin-top: 18%;
+    margin-bottom: 5%;
 }
 
 .card {
     background-color: rgb(228, 110, 74);
     place-content: center;
     border: 10px solid rgb(blue);
-    border-radius: 25px;
 }
 
 .footer {
