@@ -1,17 +1,20 @@
 {
-  "name": "beerfrontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jsonserver": "^0.1.6",
-    "nodemon": "^2.0.6",
-    "path": "^0.12.7"
-  }
+    "name": "beerfrontend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jsonserver": "^0.1.6",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
 }
